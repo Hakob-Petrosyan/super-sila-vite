@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Требуется авторизация"
+AuthUserFile /home/c65236/super-sila.thsdev.ru/.htpasswd
+Require valid-user

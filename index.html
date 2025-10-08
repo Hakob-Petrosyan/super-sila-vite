@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{> links }}
+
+    <style>
+        .presentation-content{
+            flex-wrap: wrap;
+            padding-right: 20px;
+        }
+        .pages-quantity{
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+        .pages-container{
+            display: grid;
+            grid-template-columns: 1fr 230px;
+        }
+        .pages-quantity__wrapper{
+            border-left: 1px solid var(--color-gray-100);
+        }
+
+    </style>
+
+</head>
+<body>
+{{> header }}
+
+<main class="pages-container widthContainer section-mt ">
+    <div class="presentation-content flexBox gap-24" data-pages-quantity>
+        <a href="home.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">главная страница</a>
+        <a href="about-company.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">О нас</a>
+        <a href="basket-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Корзина</a>
+        <a href="catalog.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Каталог</a>
+        <a href="comparison.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Сравнить товары</a>
+        <a href="discounts-promotions.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Скидки и акции</a>
+        <a href="discounts.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Скидки</a>
+        <a href="promotions.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Акции</a>
+        <a href="promotions-view.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Страница Акция</a>
+        <a href="empty-basket.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">пустая корзина</a>
+        <a href="empty-comparison.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Список сравнения пуст</a>
+        <a href="empty-favorites.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">В избранном пусто</a>
+        <a href="empty-order.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">пустая страница заказа</a>
+        <a href="empty-personal-basket.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">пустая-личная-корзина</a>
+        <a href="empty-reviews.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">пустая страница отзывов</a>
+        <a href="favorites.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Избранное</a>
+        <a href="help-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">страница помощи</a>
+        <a href="help-delivery.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Помощь Доставка</a>
+        <a href="help-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Помощь Оплата</a>
+        <a href="help-exchange-return-warranty.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">помощь-обмен-возврат-гарантия</a>
+        <a href="help-feedback.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">помощь-Обратная связь</a>
+        <a href="help-legal-entities.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">помощь-Для юридических лиц</a>
+        <a href="help-place-order.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">помощь-Как оформить заказ</a>
+        <a href="news-reviews-info-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Новости, обзоры, полезная информация</a>
+        <a href="news-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Новости</a>
+        <a href="news-view.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">страница новостей</a>
+        <a href="reviews-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">страница Обзоры</a>
+        <a href="useful-information-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">полезная информация</a>
+        <a href="legal-order-history-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">История заказов юридический</a>
+        <a href="order-history-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">История заказов</a>
+        <a href="order-history-view.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Страница истории заказов</a>
+        <a href="personal-account-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои данные</a>
+        <a href="personal-account-page-1.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои данные - 1</a>
+        <a href="personal-add-companies-1.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои компании 1</a>
+        <a href="personal-add-companies-2.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои компании 2</a>
+        <a href="personal-add-companies-3.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои компании 3</a>
+        <a href="personal-add-companies-4.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои компании 4</a>
+        <a href="personal-commercial-offer.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Коммерческое предложение</a>
+        <a href="personal-companies.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои компании</a>
+        <a href="personal-profile-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой профиль</a>
+        <a href="personal-reviews.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои отзывы</a>
+        <a href="placing-order-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Оформление заказа</a>
+        <a href="product-card-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">страница карточки продукта</a>
+        <a href="product-card-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">страница карточки продукта</a>
+        <a href="return-request-page.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Оформить возврат</a>
+        <a href="return-request-view.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Страница возврат</a>
+        <a href="returns.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мои возвраты</a>
+        <a href="cooperation.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Сотрудничество</a>
+        <a href="my-car.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой автомобиль</a>
+        <a href="my-car-brands.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой автомобиль (Марка)</a>
+        <a href="my-car-models.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой автомобиль (Модель)</a>
+        <a href="my-car-generation.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой автомобиль (Поколение)</a>
+        <a href="my-car-modification.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой автомобиль (Модификация)</a>
+        <a href="my-car-info.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Мой автомобиль (Доп. информация)</a>
+        <a href="my-car-edit-info.html" class="customBorder borderRadius-12 btn w-fitContent textNoWrap" target="_blank">Редактировать информацию об автомобиле</a>
+    </div>
+
+    <div class="pages-quantity__wrapper flexBox flexBox_justifyEnd mb-hide">
+        <div class="pages-quantity btn w-fitContent textNoWrap flexBox flexBox_alignCenter gap-8 color-active fontWeight600 customBoxShadow">
+            количество страниц
+            <span  data-pages-quantity-value></span>
+        </div>
+    </div>
+</main>
+
+{{> footer }}
+
+
+{{> js-src }}
+</body>
+</html>
