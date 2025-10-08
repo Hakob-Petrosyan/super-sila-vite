@@ -1111,6 +1111,7 @@ footer {
     border-radius: 100px;
     height: 6px;
     width: 6px;
+    min-width: 6px;
     background-color: transparent;
 }
 
@@ -3367,6 +3368,20 @@ button.popup-close {
 }
 
 /*END dropdown-catalog*/
+
+
+.selected-quantity{
+    height: 20px;
+    width: 21px;
+    top: -5px;
+    right: -8px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 
 .displayNone {
