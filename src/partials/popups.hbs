@@ -114,3 +114,50 @@
 
     </div>
 </div>
+
+<div class="popup popup-under w-100 popup__delete-my-car none-scrollbar" id="delete-my-car" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg class="mb-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="popup__title font-size-24">Удалить автомобиль?</div>
+        <form class="popup-form__delete-my-car flexBox ">
+            <button type="submit" class="btn delete-my-car__btn" >Удалить</button>
+            <button type="button" class="btn bg-active" data-close-popup>Отменить</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup basket-popup w-100 none-scrollbar" id="found-mistake" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative flexBox flexBox_column gap-16" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="popup__title font-size-24">Нашли ошибку?</div>
+        <div class="flexBox flexBox_column gap-24">
+            <p>
+                Тут текст пояснение
+            </p>
+
+            <form class="flexBox flexBox_column gap-24">
+                <label for="comment" class="feedback-form__item flexBox flexBox_column gap-8">
+                    <span class="font-size-12">Комментарий</span>
+                    <textarea id="comment" name="comment" placeholder="Оставьте общие впечатления о товаре" required></textarea>
+                </label>
+
+                <div class="flexBox flexBox_justifyEnd">
+                    <button class="bg-active btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
