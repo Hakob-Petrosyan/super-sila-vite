@@ -106,5 +106,10 @@
 {{> popups }}
 
 {{> js-src }}
+
+<script>
+    const pagesLinks = document.querySelector('[data-pages-quantity]').getElementsByTagName('a');
+    document.querySelector('[data-pages-quantity-value]').innerText = pagesLinks.length;
+</script>
 </body>
 </html>

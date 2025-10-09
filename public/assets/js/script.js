@@ -529,6 +529,63 @@ function resetHeaderIndexZ(){
     const header = document.querySelector('header');
     header.removeAttribute('style');
 }
+
+function initSelectCity() {
+    const cityConfirmButtons = document.querySelectorAll('[data-select-city-btn]');
+    const citiesBlock = document.getElementById("cities_block");
+    const cityConfirm = document.getElementById("city-confirm");
+
+    const cityOverlay = document.createElement('div');
+    cityOverlay.setAttribute('role', 'dialog');
+    cityOverlay.setAttribute('role', 'dialog');
+    cityOverlay.setAttribute('aria-modal', 'true');
+    cityOverlay.setAttribute('tabindex', '-1');
+    cityOverlay.setAttribute('class', 'city-overlay');
+
+
+    let openCityTimeout;
+    function openCitiesBlock() {
+        if (!localStorage.getItem("cityConfirmed")) {
+            cityConfirm.style.display = "block";
+            if (window.innerWidth < 992){
+                document.body.classList.add('popup-open');
+                citiesBlock.appendChild(cityOverlay)
+            }
+        }
+    }
+    function closeCitiesBlock(btnType = "confirm-city") {
+        cityConfirm.style.display = "none";
+        if (window.innerWidth < 992){
+            cityOverlay.remove();
+            if(btnType === 'confirm-city'){
+                document.body.classList.remove('popup-open');
+            }
+        }
+
+
+    }
+
+    const cityConfirmed = localStorage.getItem("cityConfirmed");
+    if (!cityConfirmed) {
+        openCityTimeout = setTimeout(openCitiesBlock, 5000);
+    } else {
+        cityConfirm.style.display = "none";
+    }
+
+    cityConfirmButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const btnType = btn.dataset.selectCityBtn
+            closeCitiesBlock(btnType);
+            localStorage.setItem("cityConfirmed", "true");
+            clearTimeout(openCityTimeout);
+        });
+    });
+
+    cityOverlay.addEventListener('click', () => {
+        closeCitiesBlock();
+        clearTimeout(openCityTimeout);
+    });
+}
 document.addEventListener('DOMContentLoaded', function() {
     openCloseBlock()
     initTabs()
@@ -548,6 +605,7 @@ document.addEventListener('DOMContentLoaded', function() {
     copyClipboard()
     initDropdownCatalog()
     initCloseMobileDropdownCatalog()
+    initSelectCity()
 });
 
 

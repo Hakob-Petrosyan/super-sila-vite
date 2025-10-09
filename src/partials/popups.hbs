@@ -184,3 +184,66 @@
 
     </div>
 </div>
+
+<div class="popup cities-popup w-100 none-scrollbar" id="select-city" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative flexBox flexBox_column gap-16" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="popup__title font-size-24">
+            <span class="mb-hide">Выберите ваш город</span>
+            <span class="mb-show">Ваш город</span>
+        </div>
+        <div class="cities-wrapper flexBox flexBox_column gap-24">
+            <form class="city-search borderRadius-8 flexBox flexBox_alignCenter w-100 bg-white customBorder mb-hide">
+                <label class="w-100">
+                        <input class="w-100" type="search" placeholder="Найти город" data-search-bar-input="">
+                    </label>
+                <button class="flexBox mb-hide" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                            <path d="M11.9312 12.6598C11.7182 12.4467 11.3728 12.4467 11.1598 12.6598C10.9467 12.8728 10.9467 13.2181 11.1598 13.4312L14.0688 16.3402C14.2818 16.5533 14.6272 16.5533 14.8402 16.3402C15.0533 16.1272 15.0533 15.7819 14.8402 15.5688L11.9312 12.6598Z" fill="#DB020C"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.52759 14.5C11.0622 14.5 13.9275 11.6347 13.9275 8.1001C13.9275 4.56553 11.0622 1.7002 7.52759 1.7002C3.99302 1.7002 1.12769 4.56553 1.12769 8.1001C1.12769 11.6347 3.99302 14.5 7.52759 14.5ZM7.52759 13.0778C10.2767 13.0778 12.5053 10.8492 12.5053 8.1001C12.5053 5.35099 10.2767 3.1224 7.52759 3.1224C4.77848 3.1224 2.54989 5.35099 2.54989 8.1001C2.54989 10.8492 4.77848 13.0778 7.52759 13.0778Z" fill="#DB020C"></path>
+                        </svg>
+                    </button>
+            </form>
+            <div class="cities-content flexBox">
+                <div class="cities-content__regions flexBox flexBox_column gap-12 w-100 mb-hide">
+                    <span class="fontWeight600">Регион</span>
+                    <ul class="color-active flexBox flexBox_column gap-12">
+                        <li>
+                            <a href="">Краснодарский край</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="cities-content__sities flexBox flexBox_column gap-12 w-100">
+                    <span class="fontWeight600 mb-hide">Город</span>
+                    <ul class="cities-content__list flexBox flexBox_column gap-12 custom-scrollbar">
+                        <li>
+                            <a href="" class="cities-list__item active">Краснодар</a>
+                        </li>
+                        <li>
+                            <a href="" class="cities-list__item">Усть-Лабинск</a>
+                        </li>
+                        <li>
+                            <a href="" class="cities-list__item">Темрюк</a>
+                        </li>
+                        <li>
+                            <a href="" class="cities-list__item">Майкоп</a>
+                        </li>
+                        <li>
+                            <a href="" class="cities-list__item">Белореченск</a>
+                        </li>
+                        <li>
+                            <a href="" class="cities-list__item" >Горячий ключ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

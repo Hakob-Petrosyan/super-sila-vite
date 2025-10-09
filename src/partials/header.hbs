@@ -13,13 +13,23 @@
                     </div>
                 </div>
 
-                <div class="cities flexBox flexBox_alignCenter gap-4">
+                <div id="cities_block" class="cities flexBox flexBox_alignCenter gap-4 positionRelative">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M9.85419 13.1335C11.394 11.1699 13.3337 8.31711 13.3337 6.40563C13.3337 3.236 10.9458 0.666504 8.00033 0.666504C5.05481 0.666504 2.66699 3.236 2.66699 6.40563C2.66699 8.31711 4.60663 11.1699 6.14646 13.1335C6.94982 14.1579 7.3515 14.6702 8.00033 14.6702C8.64915 14.6702 9.05083 14.1579 9.85419 13.1335ZM8.00033 8.6665C6.89576 8.6665 6.00033 7.77107 6.00033 6.6665C6.00033 5.56193 6.89576 4.6665 8.00033 4.6665C9.1049 4.6665 10.0003 5.56193 10.0003 6.6665C10.0003 7.77107 9.1049 8.6665 8.00033 8.6665Z"
                               fill="#DB020C"/>
                     </svg>
-                    <span class="font-size-14">Краснодар</span>
+                    <button class="font-size-14" data-open-popup="select-city">Краснодар</button>
+
+                    <div id="city-confirm" class="confirm-city-block bg-white customBoxShadow positionAbsolute">
+                        <div class="confirm-city__content flexBox flexBox_column">
+                            <span>Ваш город — Краснодар?</span>
+                            <div class="flexBox gap-16">
+                                <button class="confirm-city__btn-yes btn bg-active" data-select-city-btn="confirm-city">Да</button>
+                                <button class="btn customBorder nowrap" data-select-city-btn="change-city" data-open-popup="select-city">Сменить город</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

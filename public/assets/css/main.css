@@ -3381,6 +3381,36 @@ button.popup-close {
     justify-content: center;
 }
 
+/*city block*/
+.confirm-city-block{
+    top: 100%;
+    left: 0;
+    z-index: 7;
+    padding: 16px;
+    border-radius: 16px;
+    display: none;
+}
+.confirm-city__content{
+    gap: 16px;
+}
+.confirm-city__btn-yes{
+    min-width: 68px;
+}
+.city-search{
+    height: 40px;
+    padding: 0 12px;
+}
+.cities-content{
+    gap: 50px;
+}
+.cities-content__regions{
+    max-width: 200px;
+}
+.cities-content__list{
+    max-height: 213px;
+    overflow-y: auto;
+}
+/*END city block*/
 
 
 
