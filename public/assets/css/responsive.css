@@ -458,7 +458,7 @@
     }
 
     .footer-col__title:after {
-        content: url("/public/assets/assets/images/icons/row-bottom-w.svg");
+        content: url("/assets/images/icons/row-bottom-w.svg");
         transform: scale(1, 1);
         transition: transform 300ms;
     }
@@ -1882,7 +1882,7 @@
     }
 
     .dropdown-list__title:after{
-        content: url("/public/assets/assets/images/icons/dropdown-icon-8.svg");
+        content: url("/assets/images/icons/dropdown-icon-8.svg");
         display: flex;
         margin-left: auto;
         transform: scale(1, 1);
