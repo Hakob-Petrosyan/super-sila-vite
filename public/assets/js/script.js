@@ -1,4 +1,4 @@
-function openCloseBlock() {
+function openCloseBlock(){
     const openBlockBtn = document.querySelectorAll('[data-open-block-btn]');
 
     function toggleBlock(event, openBtn) {
@@ -400,10 +400,10 @@ function copyClipboard() {
     document.querySelectorAll("[data-copy]").forEach(button => {
         button.addEventListener("click", () => {
             const valueToCopy = button.getAttribute("data-copy");
-
+            const actionResultText = "Ссылка скопирована";
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(valueToCopy).then(() => {
-                    showCopied(button);
+                    showActionResult(button, actionResultText);
                 }).catch(err => {
                     console.error("Ошибка копирования: ", err);
                 });
@@ -414,7 +414,7 @@ function copyClipboard() {
                 textarea.select();
                 try {
                     document.execCommand("copy");
-                    showCopied(button);
+                    showActionResult(button, actionResultText);
                 } catch (err) {
                     console.error("execCommand copy error: ", err);
                 }
@@ -422,40 +422,47 @@ function copyClipboard() {
             }
         });
     });
+}
 
-    function showCopied(button) {
-        // создаём всплывающий элемент
-        const tooltip = document.createElement("span");
-        tooltip.textContent = "Ссылка скопирована";
-        tooltip.style.position = "absolute";
-        tooltip.style.background = "#181818";
-        tooltip.style.color = "#FFFFFF";
-        tooltip.style.padding = "8px";
-        tooltip.style.borderRadius = "8px";
-        tooltip.style.fontSize = "12px";
-        tooltip.style.whiteSpace = "nowrap";
-        tooltip.style.zIndex = "999";
-        tooltip.style.transform = "translate(0, 100%)";
-        tooltip.style.right = "0";
-        tooltip.style.top = "0";
+function addFavorites(){
+    const  addFavorites = document.querySelectorAll('[data-add-favorites]');
+    addFavorites.forEach(button => {
+        button.addEventListener("click", () => {
+            const addFavoritesResult =  button.dataset.addFavorites;
+            const actionResultText = addFavoritesResult==="success"? 'Товар добавлен в избранное': "Товар не добавлен в избранное"
+                showActionResult(button, actionResultText)
+        })
+    })
+}
+
+function showActionResult(button, actionResultText){
+    const tooltip = document.createElement("span");
+    tooltip.textContent = actionResultText;
+    tooltip.style.position = "absolute";
+    tooltip.style.background = "#181818";
+    tooltip.style.color = "#FFFFFF";
+    tooltip.style.padding = "8px";
+    tooltip.style.borderRadius = "8px";
+    tooltip.style.fontSize = "12px";
+    tooltip.style.whiteSpace = "nowrap";
+    tooltip.style.zIndex = "999";
+    tooltip.style.transform = "translate(0, 100%)";
+    tooltip.style.right = "0";
+    tooltip.style.top = "0";
+    tooltip.style.opacity = "0";
+    tooltip.style.transition = "opacity 0.3s ease";
+
+    button.style.position = "relative";
+    button.appendChild(tooltip);
+
+    requestAnimationFrame(() => {
+        tooltip.style.opacity = "1";
+    });
+
+    setTimeout(() => {
         tooltip.style.opacity = "0";
-        tooltip.style.transition = "opacity 0.3s ease";
-
-        // позиционирование относительно кнопки
-        button.style.position = "relative";
-        button.appendChild(tooltip);
-
-        // анимация появления
-        requestAnimationFrame(() => {
-            tooltip.style.opacity = "1";
-        });
-
-        // удаление через 2 секунды
-        setTimeout(() => {
-            tooltip.style.opacity = "0";
-            setTimeout(() => tooltip.remove(), 300);
-        }, 2000);
-    }
+        setTimeout(() => tooltip.remove(), 300);
+    }, 2000);
 }
 
 let hideTimeout;
@@ -603,6 +610,7 @@ document.addEventListener('DOMContentLoaded', function() {
     openMobileSearch()
     closeMobileSearch()
     copyClipboard()
+    addFavorites()
     initDropdownCatalog()
     initCloseMobileDropdownCatalog()
     initSelectCity()

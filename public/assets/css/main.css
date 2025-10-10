@@ -1667,6 +1667,7 @@ fieldset {
 .comments-sorter .filter-sort__list-wrapper {
     right: 0;
     left: auto;
+    min-width: unset;
 }
 
 .comments-sorter .filter-sort__btn {
