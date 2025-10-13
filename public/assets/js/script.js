@@ -1,8 +1,9 @@
 function openCloseBlock(){
     const openBlockBtn = document.querySelectorAll('[data-open-block-btn]');
 
-    function toggleBlock(event, openBtn) {
+    function toggleBlock(event) {
         const openBlockWrapper = event.target.closest('[data-open-block-wrapper]');
+
         const openingBlock = openBlockWrapper.querySelector('[data-open-block]');
 
         openBlockWrapper.classList.toggle('open');
@@ -11,6 +12,11 @@ function openCloseBlock(){
             openingBlock.removeAttribute('style');
         } else {
             openingBlock.style.maxHeight = openingBlock.scrollHeight + 'px';
+        }
+
+        const filterOptionContent = event.target.closest('[data-filter-option-content]');
+        if(filterOptionContent){
+            filterOptionContent.classList.remove('all-options');
         }
     }
 
@@ -536,7 +542,6 @@ function resetHeaderIndexZ(){
     const header = document.querySelector('header');
     header.removeAttribute('style');
 }
-
 function initSelectCity() {
     const cityConfirmButtons = document.querySelectorAll('[data-select-city-btn]');
     const citiesBlock = document.getElementById("cities_block");
@@ -593,6 +598,41 @@ function initSelectCity() {
         clearTimeout(openCityTimeout);
     });
 }
+
+function initCatalogFilters(){
+    const catalogFilters = document.getElementById('catalog__filters');
+    const openCatalogFilters = document.querySelector('[data-open-catalog-filters]');
+    openCatalogFilters.addEventListener('click', () => {
+        catalogFilters.classList.add('open-catalog')
+        document.body.classList.add('popup-open');
+    })
+
+}
+function initCloseCatalogFilters(){
+    const catalogFilters = document.getElementById('catalog__filters');
+    const closeMobileFilters = document.querySelector('[data-close-mobile-filters]');
+    closeMobileFilters.addEventListener('click', ()=> {
+        catalogFilters.classList.remove('open-catalog')
+        document.body.classList.remove('popup-open');
+
+    })
+}
+
+function openAllCatalogOptions(){
+
+    const filterOptionContent = document.querySelectorAll('[data-filter-option-content]');
+    filterOptionContent.forEach(filterBlock => {
+        const optionsLists = filterBlock.querySelector('[data-filter-options-list]');
+        const openMoreFiltersBtn = filterBlock.querySelector('[data-open-more-filters]');
+        const lists = optionsLists.querySelectorAll('[data-filter-options-list-item]');
+        if (lists.length > 7){
+            openMoreFiltersBtn.style.display = "flex";
+            openMoreFiltersBtn.addEventListener('click', () => {
+                filterBlock.classList.toggle('all-options')
+            })
+        }
+    })
+}
 document.addEventListener('DOMContentLoaded', function() {
     openCloseBlock()
     initTabs()
@@ -614,6 +654,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initDropdownCatalog()
     initCloseMobileDropdownCatalog()
     initSelectCity()
+    initCatalogFilters()
+    initCloseCatalogFilters()
+    openAllCatalogOptions()
 });
 
 

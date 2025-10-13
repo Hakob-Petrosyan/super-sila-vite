@@ -301,6 +301,22 @@
     .catalog-tags__wrapper .catalog__quick-search-tags {
         padding-right: 16px;
     }
+    .catalog-content--l.open-catalog{
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: var(--color-white);
+    }
+    .catalog-filters-mobile-top{
+        padding: 24px 16px;
+    }
+    .filter-group{
+        background-color: var(--color-white);
+        padding-top: 0;
+        margin-top: 18px;
+        overflow-y: auto;
+    }
+
 
     .product-card-page__main,
     .product-card-page__top {

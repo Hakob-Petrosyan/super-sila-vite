@@ -1079,6 +1079,32 @@ footer {
     width: 100%;
 }
 
+.filter-options-list .filter-options-list__item:nth-child(n + 8){
+    display: none;
+}
+
+.all-options .filter-options-list{
+    overflow-y: auto;
+}
+.all-options .filter-options-list .filter-options-list__item:nth-child(n + 8){
+    display: flex;
+}
+
+
+
+
+.show-all__filters{
+    display: none;
+}
+.show-all__filters:after{
+    content: url("/assets/images/icons/arrow-red-16.svg");
+    transform: scale(1, 1);
+    transition: transform 300ms;
+}
+.all-options .show-all__filters:after{
+    transform: scale(1, -1);
+}
+
 .filter-title__icon {
     transform: scale(1, 1);
     transition: transform 300ms;
