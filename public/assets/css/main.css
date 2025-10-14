@@ -3348,6 +3348,13 @@ button.popup-close {
 .add-commit-btn{
     margin-left: auto;
 }
+.popup--review-bottom .accordion-block{
+    margin-top: 0;
+    transition: max-height 300ms, margin-top 300ms;
+}
+.open.popup--review-bottom .accordion-block{
+    margin-top: 16px;
+}
 .popup--review-bottom__open svg{
     transform: scale(1, 1);
     transition: transform 300ms;
