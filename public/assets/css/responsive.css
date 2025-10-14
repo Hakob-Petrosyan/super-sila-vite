@@ -1818,6 +1818,10 @@
     /*END my car*/
 
     /*popups*/
+    .popup{
+        padding: 0 16px;
+        border-radius: 0;
+    }
     .basket-popup__bottom,
     .basket-popup__top {
         flex-direction: column;
@@ -1843,6 +1847,8 @@
         align-items: center;
         gap: 16px;
     }
+
+
     /*END popups*/
 
     /*dropdown catalog*/
@@ -1972,10 +1978,34 @@
         padding: 0;
     }
     .popup--fullscreen-mobile .popup__title{
-        padding: 24px 16px 16px 16px;
+        padding: 24px 44px 16px 16px;
         box-shadow: 0 -8px 30px -6px rgba(24, 39, 75, 0.06), 0 8px 30px -4px rgba(24, 39, 75, 0.06);
         max-width: 100%;
     }
+    .popup--change-company-details__info{
+        padding: 20px 16px;
+    }
+    .popup--fullscreen-mobile__content{
+        height: 100%;
+        overflow: hidden;
+        padding:8px 16px 24px;
+    }
+    .popup-custom-scroll-y{
+        overflow-y: auto;
+    }
+    .popup--change-company-details__bottom{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .popup--products-review__rating{
+        flex-direction: column;
+        padding: 16px;
+        align-items: start;
+    }
+
+
+        /*END popup*/
+
     .cities-content{
         flex-direction: column;
         gap: 24px;
@@ -1993,11 +2023,7 @@
         flex-direction: column;
         height: 100%;
     }
-    .popup--fullscreen-mobile__content{
-        height: 100%;
-        overflow: hidden;
-        padding:8px 16px 24px;
-    }
+
         /*END city block*/
 
 

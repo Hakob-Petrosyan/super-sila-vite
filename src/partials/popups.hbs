@@ -1,6 +1,7 @@
 <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle"
      tabindex="-1"></div>
-<div class="popup-overlay dropdown-overlay" id="dropdownOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" tabindex="-1"></div>
+<div class="popup-overlay dropdown-overlay" id="dropdownOverlay" role="dialog" aria-modal="true"
+     aria-labelledby="popupTitle" tabindex="-1"></div>
 
 <div class="popup w-100 none-scrollbar" id="delivery-popup" data-popup>
 
@@ -119,14 +120,15 @@
     <div class="popup-content bg-white borderRadius-24 positionRelative" tabindex="0">
         <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
                 data-close-popup>
-            <svg class="mb-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <svg class="mb-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                 fill="none">
                 <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
                 <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
             </svg>
         </button>
         <div class="popup__title font-size-24">Удалить автомобиль?</div>
         <form class="popup-form__delete-my-car flexBox ">
-            <button type="submit" class="btn delete-my-car__btn" >Удалить</button>
+            <button type="submit" class="btn delete-my-car__btn">Удалить</button>
             <button type="button" class="btn bg-active" data-close-popup>Отменить</button>
         </form>
     </div>
@@ -150,7 +152,8 @@
             <form class="flexBox flexBox_column gap-24">
                 <label for="comment" class="feedback-form__item flexBox flexBox_column gap-8">
                     <span class="font-size-12">Комментарий</span>
-                    <textarea id="comment" name="comment" placeholder="Оставьте общие впечатления о товаре" required></textarea>
+                    <textarea id="comment" name="comment" placeholder="Оставьте общие впечатления о товаре"
+                              required></textarea>
                 </label>
 
                 <div class="flexBox flexBox_justifyEnd">
@@ -201,14 +204,17 @@
         <div class="popup--fullscreen-mobile__content flexBox flexBox_column gap-24">
             <form class="city-search borderRadius-8 flexBox flexBox_alignCenter w-100 bg-white customBorder mb-hide">
                 <label class="w-100">
-                        <input class="w-100" type="search" placeholder="Найти город" data-search-bar-input="">
-                    </label>
+                    <input class="w-100" type="search" placeholder="Найти город" data-search-bar-input="">
+                </label>
                 <button class="flexBox mb-hide" disabled="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
-                            <path d="M11.9312 12.6598C11.7182 12.4467 11.3728 12.4467 11.1598 12.6598C10.9467 12.8728 10.9467 13.2181 11.1598 13.4312L14.0688 16.3402C14.2818 16.5533 14.6272 16.5533 14.8402 16.3402C15.0533 16.1272 15.0533 15.7819 14.8402 15.5688L11.9312 12.6598Z" fill="#DB020C"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.52759 14.5C11.0622 14.5 13.9275 11.6347 13.9275 8.1001C13.9275 4.56553 11.0622 1.7002 7.52759 1.7002C3.99302 1.7002 1.12769 4.56553 1.12769 8.1001C1.12769 11.6347 3.99302 14.5 7.52759 14.5ZM7.52759 13.0778C10.2767 13.0778 12.5053 10.8492 12.5053 8.1001C12.5053 5.35099 10.2767 3.1224 7.52759 3.1224C4.77848 3.1224 2.54989 5.35099 2.54989 8.1001C2.54989 10.8492 4.77848 13.0778 7.52759 13.0778Z" fill="#DB020C"></path>
-                        </svg>
-                    </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                        <path d="M11.9312 12.6598C11.7182 12.4467 11.3728 12.4467 11.1598 12.6598C10.9467 12.8728 10.9467 13.2181 11.1598 13.4312L14.0688 16.3402C14.2818 16.5533 14.6272 16.5533 14.8402 16.3402C15.0533 16.1272 15.0533 15.7819 14.8402 15.5688L11.9312 12.6598Z"
+                              fill="#DB020C"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M7.52759 14.5C11.0622 14.5 13.9275 11.6347 13.9275 8.1001C13.9275 4.56553 11.0622 1.7002 7.52759 1.7002C3.99302 1.7002 1.12769 4.56553 1.12769 8.1001C1.12769 11.6347 3.99302 14.5 7.52759 14.5ZM7.52759 13.0778C10.2767 13.0778 12.5053 10.8492 12.5053 8.1001C12.5053 5.35099 10.2767 3.1224 7.52759 3.1224C4.77848 3.1224 2.54989 5.35099 2.54989 8.1001C2.54989 10.8492 4.77848 13.0778 7.52759 13.0778Z"
+                              fill="#DB020C"></path>
+                    </svg>
+                </button>
             </form>
             <div class="cities-content flexBox">
                 <div class="cities-content__regions flexBox flexBox_column gap-12 w-100 mb-hide">
@@ -239,7 +245,7 @@
                             <a href="" class="cities-list__item">Белореченск</a>
                         </li>
                         <li>
-                            <a href="" class="cities-list__item" >Горячий ключ</a>
+                            <a href="" class="cities-list__item">Горячий ключ</a>
                         </li>
                     </ul>
                 </div>
@@ -265,3 +271,275 @@
         </div>
     </div>
 </div>
+
+<div class="popup popup--company-added w-100 none-scrollbar" id="add-company-success" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative flexBox flexBox_column gap-16" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="flexBox flexBox_column flexBox_alignCenter gap-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M29.2633 15.8338C29.7238 15.3195 29.6802 14.5292 29.1658 14.0687C28.6515 13.6083 27.8612 13.6519 27.4007 14.1663L21.7854 20.4382C20.6476 21.7091 19.8814 22.5605 19.2262 23.1111C18.6021 23.6357 18.2356 23.75 17.9154 23.75C17.5952 23.75 17.2286 23.6357 16.6045 23.1111C15.9494 22.5605 15.1831 21.7091 14.0453 20.4382L12.5967 18.8202C12.1362 18.3059 11.3459 18.2622 10.8316 18.7227C10.3172 19.1832 10.2736 19.9734 10.7341 20.4878L12.2446 22.1749C13.3043 23.3587 14.1883 24.3461 14.9959 25.0249C15.8503 25.743 16.7719 26.25 17.9154 26.25C19.0588 26.25 19.9804 25.7431 20.8348 25.0249C21.6424 24.3461 22.5264 23.3587 23.5861 22.175L29.2633 15.8338Z"
+                      fill="#06AA53"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.9987 2.08337C10.1036 2.08337 2.08203 10.1049 2.08203 20C2.08203 29.8951 10.1036 37.9167 19.9987 37.9167C29.8938 37.9167 37.9154 29.8951 37.9154 20C37.9154 10.1049 29.8938 2.08337 19.9987 2.08337ZM4.58203 20C4.58203 11.4857 11.4843 4.58337 19.9987 4.58337C28.5131 4.58337 35.4154 11.4857 35.4154 20C35.4154 28.5144 28.5131 35.4167 19.9987 35.4167C11.4843 35.4167 4.58203 28.5144 4.58203 20Z"
+                      fill="#06AA53"/>
+            </svg>
+            <div class="popup__title font-size-24 textAlignCenter">Ваша компания добавлена</div>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup--fullscreen-mobile w-100 none-scrollbar" id="change-company-details" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative flexBox flexBox_column gap-16" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="popup__title font-size-24">
+            Как изменить реквизиты компании
+        </div>
+        <div class="popup--fullscreen-mobile__content popup-custom-scroll-y flexBox flexBox_column gap-24">
+            <div class="popup--change-company-details__info bg-gray-25 borderRadius-16">
+                Если не будут заполнены все реквизиты, то при печати документов не
+                будет видна информация о предприятии (строки будут пустыми) - такой документ недействителен.
+            </div>
+
+            <p>
+                При изменении ИНН и КПП организации необходимо завести и заполнить НОВУЮ
+                организацию в личном кабинете.
+                <br>
+                <br>
+                В случае изменения банковских реквизитов, наименования организации
+                или иной информации, а также не соответствия данных согласно введенным
+                ИНН и КПП необходимо обратиться ЛИЧНО в любой розничный магазин DNS
+                для внесения изменений, либо написать сообщение в разделе Обратная
+                связь, тема «Покупка товара/Корпоративные продажи» с указанием контактного
+                телефона и приложением скан-копий необходимых документов.
+            </p>
+
+            <div class="popup--change-company-details__bottom flexBox gap-24">
+                <button type="button" class="btn customBorder">Адреса магазинов</button>
+                <button type="button" class="btn bg-active">Написать сообщение</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="popup popup--fullscreen-mobile w-100 none-scrollbar" id="rules-adding" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative flexBox flexBox_column gap-16" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="popup__title font-size-24">Правила добавления компании</div>
+        <div class="popup--fullscreen-mobile__content  popup-custom-scroll-y flexBox flexBox_column gap-24">
+            1. Перед созданием нового контрагента необходимо убедиться, что сейчас нет контрагента с тем же ИНН, КПП.
+            <br>
+            <br>
+            2. При создании нового контрагента своей организации необходимо заполнить все поля, особенное внимание при
+            заполнении важно уделить точности данных. Обязательные поля: ИНН, Наименование, Официальное наименование,
+            номер мобильного телефона, Обращение.
+            <br>
+            <br>
+            3. Если наименование организации длинное, то его можно проверить на сайте Налоговой службы и вписать его
+            краткое наименование. Адрес сайта налоговой службы:: https://egrul.nalog.ru/
+            <br>
+            <br>
+            4. В поле «наименование» в карточке клиента вначале проставляют наименование, затем организационную форму
+            <br>
+            <br>
+            5. В поле «наименование для печати» вначале проставляют организационную форму, затем наименование
+            <br>
+            <br>
+            6. Обязательно! В контактные данные в поле «телефон» прописывается ТОЛЬКО рабочий телефон компании (данная
+            информация попадает при печати счета)
+
+            Важно! Если не заполнить все реквизиты, то при печати документов не будет видна информация о предприятии
+            (строки будут пустыми) — такой документ является недействительным.
+
+            При изменении ИНН и КПП организации необходимо завести и заполнить НОВУЮ организацию в личном кабинете.
+
+            Для клиентов, у которых по каким-либо причинам изменились банковские реквизиты или иная информация,
+            необходимо обратиться по телефону или лично в любой розничный магазин по месту базирования компании для
+            внесения правок в карточку организации.
+        </div>
+
+    </div>
+</div>
+
+<div class="popup popup--products-review popup--fullscreen-mobile w-100 none-scrollbar" id="products-review" data-popup>
+    <div class="popup-content bg-white borderRadius-24 positionRelative flexBox flexBox_column gap-16" tabindex="0">
+        <button type="button" class="popup-close positionAbsolute" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 16L16 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+                <path d="M16 16L2 2" stroke="#747474" stroke-width="2.33333" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="popup__title font-size-24">Ваш отзыв к товару</div>
+        <div class="popup--fullscreen-mobile__content popup-custom-scroll-y  flexBox flexBox_column gap-24">
+            <form class="flexBox flexBox_column gap-24">
+
+                <div class="flexBox flexBox_column gap-16">
+                    <div class="flexBox flexBox_alignCenter gap-16">
+                        <div class="popup--products-review__img">
+                            <img src="/assets/images/cards-images/product-image-1.webp" alt="order-history-img">
+                        </div>
+                        <div class="flexBox flexBox_column gap-8">
+                            <p>Автомобильный аккумулятор Mutlu SMF 56081 60 Ач обратная полярность L2</p>
+                            <div class="basket-page__card-product-size flexBox_alignCenter gap-8 font-size-12-10">
+                                <span class="product-card__specs bg-surface-light borderRadius-6">540А</span>
+                                <span class="product-card__specs bg-surface-light borderRadius-6">241х175х190</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="popup--products-review__rating flexBox flexBox_alignCenter gap-16 bg-gray-25 borderRadius-16">
+                        <span class="font-size-18-16 fontWeight600">Общая оценка товара</span>
+                        <div class="rating-area flexBox_justifyCenter" data-rating-stars>
+                            <div class="rating-star" data-rating-star="" data-value="1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"
+                                     fill="none">
+                                    <path d="M11.875 0L15.1901 7.43714L23.2877 8.2918L17.239 13.7429L18.9284 21.7082L11.875 17.64L4.82158 21.7082L6.51104 13.7429L0.462322 8.2918L8.55989 7.43714L11.875 0Z"
+                                          fill="#D9D9D9"></path>
+                                </svg>
+                            </div>
+                            <div class="rating-star" data-rating-star="" data-value="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"
+                                     fill="none">
+                                    <path d="M11.875 0L15.1901 7.43714L23.2877 8.2918L17.239 13.7429L18.9284 21.7082L11.875 17.64L4.82158 21.7082L6.51104 13.7429L0.462322 8.2918L8.55989 7.43714L11.875 0Z"
+                                          fill="#D9D9D9"></path>
+                                </svg>
+                            </div>
+                            <div class="rating-star" data-rating-star="" data-value="3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"
+                                     fill="none">
+                                    <path d="M11.875 0L15.1901 7.43714L23.2877 8.2918L17.239 13.7429L18.9284 21.7082L11.875 17.64L4.82158 21.7082L6.51104 13.7429L0.462322 8.2918L8.55989 7.43714L11.875 0Z"
+                                          fill="#D9D9D9"></path>
+                                </svg>
+                            </div>
+                            <div class="rating-star" data-rating-star="" data-value="4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"
+                                     fill="none">
+                                    <path d="M11.875 0L15.1901 7.43714L23.2877 8.2918L17.239 13.7429L18.9284 21.7082L11.875 17.64L4.82158 21.7082L6.51104 13.7429L0.462322 8.2918L8.55989 7.43714L11.875 0Z"
+                                          fill="#D9D9D9"></path>
+                                </svg>
+                            </div>
+                            <div class="rating-star" data-rating-star="" data-value="5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"
+                                     fill="none">
+                                    <path d="M11.875 0L15.1901 7.43714L23.2877 8.2918L17.239 13.7429L18.9284 21.7082L11.875 17.64L4.82158 21.7082L6.51104 13.7429L0.462322 8.2918L8.55989 7.43714L11.875 0Z"
+                                          fill="#D9D9D9"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="popup--review-top flexBox flexBox_column gap-16">
+                    <li>
+                        <span>От кого:</span>
+                        <span>Анонимный отзыв</span>
+                    </li>
+                    <li>
+                        <span>Дата отзыва:</span>
+                        <span>01.10.2023</span>
+                    </li>
+                    <li>
+                        <span>Срок использования: </span>
+                        <span>Менее месяца</span>
+                    </li>
+                </ul>
+
+                <ul class="popup--review-content flexBox flexBox_column gap-24">
+                    <li>
+                        <span>Достоинства:</span>
+                        <span>Хороший и мощный</span>
+                    </li>
+                    <li>
+                        <span>Недостатки:</span>
+                        <span>Не обнаружены</span>
+                    </li>
+                    <li>
+                        <span>Комментарий:</span>
+                        <span>
+                                Симпатичный, вместительный, тихий, 7 режимов,
+                                у меня стоит на 3, вполне охлажденные напитки.
+                                Полки выставляешь как удобно, отсек для фруктов,
+                                овощей, закуски
+                            </span>
+                    </li>
+                </ul>
+
+                <div class="popup--review-images flexBox gap-16">
+                    <div class="popup--review-image borderRadius-8">
+                        <img src="assets/images/cards-images/review-image-2.webp" alt="Изображение товара" class="ratings__image">
+                    </div>
+                    <div class="popup--review-image borderRadius-8">
+                        <img src="assets/images/cards-images/review-image-3.webp" alt="Изображение товара" class="ratings__image">
+                    </div>
+                    <div class="popup--review-image borderRadius-8">
+                        <img src="assets/images/cards-images/review-image-4.webp" alt="Изображение товара" class="ratings__image">
+                    </div>
+                    <div class="popup--review-image borderRadius-8">
+                        <img src="assets/images/cards-images/review-image-5.webp" alt="Изображение товара" class="ratings__image">
+                    </div>
+                </div>
+
+                <div class="popup--review-bottom" data-open-block-wrapper>
+                    <button type="button" class="popup--review-bottom__open flexBox flexBox_alignCenter gap-8" data-open-block-btn>
+                        <span class="color-active">Комментарии (1)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.29289 6.29289C2.68342 5.90237 3.31658 5.90237 3.70711 6.29289L8 10.5858L12.2929 6.29289C12.6834 5.90237 13.3166 5.90237 13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711L8.70711 12.7071C8.31658 13.0976 7.68342 13.0976 7.29289 12.7071L2.29289 7.70711C1.90237 7.31658 1.90237 6.68342 2.29289 6.29289Z" fill="#DB020C"/>
+                        </svg>
+                    </button>
+
+                    <div class="accordion-block flexBox flexBox_column gap-16" data-open-block>
+                        <label class="flexBox flexBox_column gap-8">
+                            <span class="font-size-12">Комментарий</span>
+                            <textarea name="comment" class="popup--review-comment customBorder borderRadius-8" placeholder="Оставьте общие впечатления о товаре"></textarea>
+                        </label>
+                        <button type=submit class="add-commit-btn btn bg-active">
+                            Отправить
+                        </button>
+                        <div class="comments-creator flexBox gap-24">
+                            <div class="comments-creator__image flexBox bg-gray-100">
+                                <img src="/assets/images/news-page/comments-creator-image.png" alt="comments-creator">
+                            </div>
+                            <div class="flexBox flexBox_column gap-12">
+                                <div class="flexBox flexBox_column gap-4">
+                                    <div class="fontWeight600">Анонимный отзыв</div>
+                                    <div class="flexBox flexBox_alignCenter gap-8">01.10.2023</div>
+                                </div>
+
+                                <div class="review-content ">
+                                    <p>
+                                        Симпатичный, вместительный, тихий, 7 режимов, у меня стоит на 3,
+                                        вполне охлажденные напитки. Полки выставляешь как удобно,
+                                        отсек для фруктов, овощей, закуски
+                                    </p>
+                                </div>
+
+                                <div class="color-active">Ответить</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
